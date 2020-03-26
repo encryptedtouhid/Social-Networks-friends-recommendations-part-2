@@ -1,0 +1,137 @@
+Python 3.6.0 (v3.6.0:41df79263a11, Dec 22 2016, 17:23:13) 
+[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
+Type "copyright", "credits" or "license()" for more information.
+>>> WARNING: The version of Tcl/Tk (8.5.9) in use may be unstable.
+Visit http://www.python.org/download/mac/tcltk/ for current information.
+
+ RESTART: /Users/vida/Dropbox/courses/python-iti1120-2017/assignment5/bonus/a5_bonus_solved.py 
+Let's get first file that contains IDs and names:
+Enter the name of the file: net1_bla.txt
+There is no file with that name. Try again.
+Enter the name of the file: net1_with_names.txt
+Let's get the 2nd file that contains pairs of friends as in Assignment 4
+Enter the name of the file: net100.txt
+There is no file with that name. Try again.
+Enter the name of the file: net1.txt
+Here are all the people in the network, if the network has at most 20 users:
+Network([Person(0,Nikki J. Vernon,[1, 2, 3]), Person(1,Stephen A. Dow,[0, 4, 6, 7, 9]), Person(2,Margarita V. Bentley,[0, 3, 6, 8, 9]), Person(3,Hazim Khaleel Shamoun,[0, 2, 8, 9]), Person(4,Tony Risku,[1, 6, 7, 8]), Person(5,Pipaluk Andersen,[9]), Person(6,Kallaor Subaiesh,[1, 2, 4, 8]), Person(7,Veronika Marinovic,[1, 4, 8]), Person(8,Gorhendad Chubb,[2, 3, 4, 6, 7]), Person(9,Tiago Santos Barros,[1, 2, 3, 5])])
+
+Let's recommend a friend for a user you specify.
+Enter an integer for a user ID:100
+That user ID does not exist. Try again.
+Enter an integer for a user ID:2
+For user with ID 2 we recommend the user with ID 1
+That is because users 2 and 1 have 3 common friends and
+user 2 does not have more common friends with anyone else.
+
+Finally, you showed interest in knowing common friends of some pairs of users.
+About 1st user ...
+Enter an integer for a user ID:-1
+That user ID does not exist. Try again.
+Enter an integer for a user ID:50
+That user ID does not exist. Try again.
+Enter an integer for a user ID:2
+About 2st user ...
+Enter an integer for a user ID:5
+Here is the list of common friends of 2 and 5
+9 
+>>>
+>>> 
+>>> 
+>>> 
+ RESTART: /Users/vida/Dropbox/courses/python-iti1120-2017/assignment5/bonus/a5_bonus_solved.py 
+Let's get first file that contains IDs and names:
+Enter the name of the file: net3_with_names.txt
+Let's get the 2nd file that contains pairs of friends as in Assignment 4
+Enter the name of the file: net3.txt
+Here are all the people in the network, if the network has at most 20 users:
+Network([Person(0,Nikki J. Vernon,[1, 2, 3, 4, 5, 6, 7, 8, 9]), Person(1,Stephen A. Dow,[0, 4, 6, 7, 9]), Person(2,Margarita V. Bentley,[0, 3, 6, 8, 9]), Person(3,Hazim Khaleel Shamoun,[0, 2, 8, 9]), Person(4,Tony Risku,[0, 1, 6, 7, 8]), Person(5,Pipaluk Andersen,[0, 9]), Person(6,Kallaor Subaiesh,[0, 1, 2, 4, 8]), Person(7,Veronika Marinovic,[0, 1, 4, 8]), Person(8,Gorhendad Chubb,[0, 2, 3, 4, 6, 7]), Person(9,Tiago Santos Barros,[0, 1, 2, 3, 5]), Person(100,Selassie Iggi,[112]), Person(112,Willow Paterson,[100, 114]), Person(114,Niamh Watt,[112])])
+
+Let's recommend a friend for a user you specify.
+Enter an integer for a user ID:112
+We have nobody to recommend for user with ID 112 since he/she is dominating in their connected component
+
+Finally, you showed interest in knowing common friends of some pairs of users.
+About 1st user ...
+Enter an integer for a user ID:0
+About 2st user ...
+Enter an integer for a user ID:7
+Here is the list of common friends of 0 and 7
+1 4 8 
+>>> 
+>>> 
+>>> p=Person(300044444, "Vida Dujmovic", [2,45, 8877777, 300011111])
+>> p.id
+300044444
+>>> p.name
+'Vida Dujmovic'
+>>> p.friends
+[2, 45, 8877777, 300011111]
+>>> p
+Person(300044444,Vida Dujmovic,[2, 45, 8877777, 300011111])
+>>> print(p)
+Person(300044444,Vida Dujmovic,[2, 45, 8877777, 300011111])
+>>> p.get_friends()
+[2, 45, 8877777, 300011111]
+>>>
+>>> # the following is a call to Pyton's max function. I did not code any max function
+>>> max(p.get_friends())
+300011111
+>>> 
+>>>
+>>> q=Person(8811111,"Seven of Nine", [11, 40, 45, 300011111, 1000000000000])
+>>> q.id
+8811111
+>>> q.name
+'Seven of Nine'
+>>> q.friends
+[11, 40, 45, 300011111, 1000000000000]
+>>> q.get_friends()
+[11, 40, 45, 300011111, 1000000000000]
+>>> q
+Person(8811111,Seven of Nine,[11, 40, 45, 300011111, 1000000000000])
+>>> print(q)
+Person(8811111,Seven of Nine,[11, 40, 45, 300011111, 1000000000000])
+>>> # the following is a call to Pyton's max function. I did not code any max function
+>>> max(q.get_friends())
+1000000000000
+>>> 
+>>> nx=Network("net1_with_names.txt", "net1.txt")
+>>> nx
+Network([Person(0,Nikki J. Vernon,[1, 2, 3]), Person(1,Stephen A. Dow,[0, 4, 6, 7, 9]), Person(2,Margarita V. Bentley,[0, 3, 6, 8, 9]), Person(3,Hazim Khaleel Shamoun,[0, 2, 8, 9]), Person(4,Tony Risku,[1, 6, 7, 8]), Person(5,Pipaluk Andersen,[9]), Person(6,Kallaor Subaiesh,[1, 2, 4, 8]), Person(7,Veronika Marinovic,[1, 4, 8]), Person(8,Gorhendad Chubb,[2, 3, 4, 6, 7]), Person(9,Tiago Santos Barros,[1, 2, 3, 5])])
+>>> len(nx)
+10
+>>> print(nx)
+Network([Person(0,Nikki J. Vernon,[1, 2, 3]), Person(1,Stephen A. Dow,[0, 4, 6, 7, 9]), Person(2,Margarita V. Bentley,[0, 3, 6, 8, 9]), Person(3,Hazim Khaleel Shamoun,[0, 2, 8, 9]), Person(4,Tony Risku,[1, 6, 7, 8]), Person(5,Pipaluk Andersen,[9]), Person(6,Kallaor Subaiesh,[1, 2, 4, 8]), Person(7,Veronika Marinovic,[1, 4, 8]), Person(8,Gorhendad Chubb,[2, 3, 4, 6, 7]), Person(9,Tiago Santos Barros,[1, 2, 3, 5])])
+>>> nx.getCommonFriends(1,8)
+[4, 6, 7]
+>>> nx.recommend(9)
+0
+>>> nx.get_uid()
+Enter an integer for a user ID:100
+That user ID does not exist. Try again.
+Enter an integer for a user ID:4
+4
+>>> 
+>>> nx.network
+[Person(0,Nikki J. Vernon,[1, 2, 3]), Person(1,Stephen A. Dow,[0, 4, 6, 7, 9]), Person(2,Margarita V. Bentley,[0, 3, 6, 8, 9]), Person(3,Hazim Khaleel Shamoun,[0, 2, 8, 9]), Person(4,Tony Risku,[1, 6, 7, 8]), Person(5,Pipaluk Andersen,[9]), Person(6,Kallaor Subaiesh,[1, 2, 4, 8]), Person(7,Veronika Marinovic,[1, 4, 8]), Person(8,Gorhendad Chubb,[2, 3, 4, 6, 7]), Person(9,Tiago Santos Barros,[1, 2, 3, 5])]
+>>> 
+>>>
+>>>
+>>> nz=Network("net3_with_names.txt","net3.txt")
+>>> nz
+Network([Person(0,Nikki J. Vernon,[1, 2, 3, 4, 5, 6, 7, 8, 9]), Person(1,Stephen A. Dow,[0, 4, 6, 7, 9]), Person(2,Margarita V. Bentley,[0, 3, 6, 8, 9]), Person(3,Hazim Khaleel Shamoun,[0, 2, 8, 9]), Person(4,Tony Risku,[0, 1, 6, 7, 8]), Person(5,Pipaluk Andersen,[0, 9]), Person(6,Kallaor Subaiesh,[0, 1, 2, 4, 8]), Person(7,Veronika Marinovic,[0, 1, 4, 8]), Person(8,Gorhendad Chubb,[0, 2, 3, 4, 6, 7]), Person(9,Tiago Santos Barros,[0, 1, 2, 3, 5]), Person(100,Selassie Iggi,[112]), Person(112,Willow Paterson,[100, 114]), Person(114,Niamh Watt,[112])])
+>>> len(nz)
+13
+>>> nz.network
+[Person(0,Nikki J. Vernon,[1, 2, 3, 4, 5, 6, 7, 8, 9]), Person(1,Stephen A. Dow,[0, 4, 6, 7, 9]), Person(2,Margarita V. Bentley,[0, 3, 6, 8, 9]), Person(3,Hazim Khaleel Shamoun,[0, 2, 8, 9]), Person(4,Tony Risku,[0, 1, 6, 7, 8]), Person(5,Pipaluk Andersen,[0, 9]), Person(6,Kallaor Subaiesh,[0, 1, 2, 4, 8]), Person(7,Veronika Marinovic,[0, 1, 4, 8]), Person(8,Gorhendad Chubb,[0, 2, 3, 4, 6, 7]), Person(9,Tiago Santos Barros,[0, 1, 2, 3, 5]), Person(100,Selassie Iggi,[112]), Person(112,Willow Paterson,[100, 114]), Person(114,Niamh Watt,[112])]
+>>> 
+>>> 
+>>>
+>>> nq=Network("bla_with_friends.txt","net3.txt")
+Traceback (most recent call last):
+  File "<pyshell#14>", line 1, in <module>
+    nq=Network("bla_with_friends.txt","net3.txt")
+  File "/Users/vida/Dropbox/courses/python-iti1120-2017/assignment5/bonus/a5_bonus_solved.py", line 26, in __init__
+    private = open(file_name1).read().splitlines()
+FileNotFoundError: [Errno 2] No such file or directory: 'bla_with_friends.txt'
